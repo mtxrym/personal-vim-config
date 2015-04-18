@@ -110,4 +110,12 @@ set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
 " ================ Custom Settings ========================
-so ~/.yadr/vim/settings.vim
+set background=dark
+"so ~/.yadr/vim/settings.vim
+set t_Co=16
+let g:molokai_original = 1
+let g:rehash256 = 1
+colorscheme solarized
+let g:solarized_termcolors=16
+colorscheme solarized
+let g:CSApprox_loaded=1
