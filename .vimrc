@@ -4,9 +4,9 @@ set nocompatible
 
 " TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
 " source ~/.vimrc.before if it exists.
-if filereadable(expand("~/.vimrc.before"))
-  source ~/.vimrc.before
-endif
+" if filereadable(expand("~/.vimrc.before"))
+"   source ~/.vimrc.before
+" endif
 
 " ================ General Config ====================
 
@@ -18,6 +18,7 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 " set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set autowrite
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -32,6 +33,7 @@ syntax on
 " The mapleader has to be set before vundle starts loading all 
 " the plugins.
 let mapleader=","
+let g:mapleader = ","
 
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundles.vim
@@ -45,6 +47,7 @@ endif
 set noswapfile
 set nobackup
 set nowb
+map <leader>ff :CtrlP ./<cr>
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
@@ -56,20 +59,19 @@ if has('persistent_undo')
 endif
 
 " ================ Indentation ======================
-
 set autoindent
 set smartindent
 set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set expandtab
 
 filetype plugin on
 filetype indent on
 
 " Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:\|\ ,trail:·
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
@@ -111,7 +113,6 @@ set smartcase       " ...unless we type a capital
 
 " ================ Custom Settings ========================
 set background=dark
-"so ~/.yadr/vim/settings.vim
 set t_Co=16
 " let g:molokai_original = 1
 "let g:rehash256 = 1
@@ -119,3 +120,4 @@ colorscheme solarized
 let g:solarized_termcolors=16
 colorscheme solarized
 let g:CSApprox_loaded=1
+so ~/.vim/settings.vim
