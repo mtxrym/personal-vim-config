@@ -16,7 +16,7 @@ set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
-set visualbell                  "No sounds
+" set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
 " This makes vim act like all other editors, buffers can
@@ -113,8 +113,8 @@ set smartcase       " ...unless we type a capital
 set background=dark
 "so ~/.yadr/vim/settings.vim
 set t_Co=16
-let g:molokai_original = 1
-let g:rehash256 = 1
+" let g:molokai_original = 1
+"let g:rehash256 = 1
 colorscheme solarized
 let g:solarized_termcolors=16
 colorscheme solarized
